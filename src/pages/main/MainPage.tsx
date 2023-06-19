@@ -46,6 +46,7 @@ const useStyles = makeStyles(() => ({
     lineHeight: "140%",
     padding: "10px 16px",
     fontWeight: 600,
+    textAlign: "center",
     borderRadius: "12px",
     "&:hover": {
       opacity: "0.7",
@@ -461,7 +462,7 @@ const MainPage = () => {
           <h3 className={classes.prewiew__subtitle}>
             Создаем продукты в условиях нечеткого или отсутствующего ТЗ
           </h3>
-          <button className={classes.prewiew__button}>Связаться с нами</button>
+          <a href="#contacts" className={classes.prewiew__button}>Связаться с нами</a>
         </div>
       </section>
       <section className={classes.advantages}>
