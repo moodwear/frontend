@@ -221,7 +221,6 @@ const useStyles = makeStyles(() => ({
   },
   project__image: {
     width: "540px",
-    height: "260px",
     borderRadius: "20px",
     marginTop: "8px",
   },
