@@ -1,11 +1,9 @@
-import React from "react";
 import Wrapper from "../../components/wrapper/Wrapper";
 import { makeStyles } from "@mui/styles";
 
 import mainPicture from "./images/main.jpg";
 import colors from "../../theme/colors";
 import fonts from "../../theme/fonts";
-import Article from "../../components/article/Article";
 import account1 from "./images/accaunt-logo1.svg";
 import articleImage from "./images/main.png";
 import tg from "./images/Frame 95.png";

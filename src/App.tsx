@@ -1,6 +1,5 @@
-import React, { useMemo } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 
 import generateRoutes from "./pages";
 import theme from "./theme/theme";

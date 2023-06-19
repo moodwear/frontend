@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { makeStyles } from '@mui/styles';
 import fonts from '../../theme/fonts';
 import colors from '../../theme/colors';
@@ -6,16 +6,6 @@ import colors from '../../theme/colors';
 type PropsType = {
     type: 'news' | 'study' | 'project';
     text: String;
-}
-
-const calcColor = (type: 'news' | 'study' | 'project') => {
-    if (type === 'news') {
-        return colors.pink
-    } else if (type === 'study') {
-        return colors.orange
-    } else {
-        return colors.green
-    }
 }
 
 const color = {

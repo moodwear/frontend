@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles } from "@mui/styles";
 import logo from "../../assets/logo-dark.svg";
 import Wrapper from "../wrapper/Wrapper";

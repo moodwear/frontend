@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import Wrapper from "../wrapper/Wrapper";
 import logo from "../../assets/logo.svg";
