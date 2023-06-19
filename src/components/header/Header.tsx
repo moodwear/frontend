@@ -62,7 +62,7 @@ const useStyles = makeStyles(() => ({
     position: "absolute",
     display: "flex",
     flexDirection: "column",
-    height: "30vh",
+    height: "60vh",
     width: "100vw",
     padding: "24px 25px",
     top: "56px",
