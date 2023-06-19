@@ -176,6 +176,7 @@ const useStyles = makeStyles(() => ({
     lineHeight: "120%",
   },
   about__question_button: {
+    textAlign: 'center',
     backgroundColor: colors.white,
     color: colors.blue,
     fontSize: fonts.h6,
