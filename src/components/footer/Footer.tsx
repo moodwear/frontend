@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     [theme.breakpoints.down("sm")]: {
       backgroundImage: `url('/Group 725.png')`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '100%',
+      backgroundSize: 'cover',
     },
   },
   footer__inner: {
@@ -82,8 +82,8 @@ const useStyles = makeStyles(() => ({
     },
   },
   footer__image: {
-    marginTop: '10px',
-  }
+    marginTop: '10px'
+  },
 }));
 
 const Footer = () => {

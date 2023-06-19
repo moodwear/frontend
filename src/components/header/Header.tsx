@@ -10,6 +10,7 @@ import { useMediaQuery } from "@mui/material";
 import closedMenuIcon from "../../assets/Frame 251.svg";
 import openedMenuIcon from "../../assets/Vector.svg";
 import theme from "../../theme/theme";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -62,7 +63,7 @@ const useStyles = makeStyles(() => ({
     position: "absolute",
     display: "flex",
     flexDirection: "column",
-    height: "60vh",
+    height: "100vh",
     width: "100vw",
     padding: "24px 25px",
     top: "56px",
@@ -70,6 +71,7 @@ const useStyles = makeStyles(() => ({
     gap: "24px",
     boxShadow: "15px 25px 25px #0f0f0f",
     backgroundColor: colors.white,
+    transition: 'all 0.5s',
   },
 }));
 
@@ -85,36 +87,16 @@ const Header = () => {
           <div className={classes.header__navigation}>
             <img src={logo}></img>
             <nav className={classes.header__navigation_list}>
-              <span onClick={() => setOpen(false)}>
-                <a href="#about" className={classes.header__link}>
-                  О компании
-                </a>
-              </span>
-              <a
-                href="#projects"
-                className={classes.header__link}
-                onClick={() => {
-                  setOpen(false);
-                }}
-              >
+              <a className={classes.header__link} href="#about">
+                О компании
+              </a>
+              <a href="#projects" className={classes.header__link}>
                 Наши проекты
               </a>
-              <a
-                href="#blog"
-                className={classes.header__link}
-                onClick={() => {
-                  setOpen(false);
-                }}
-              >
+              <a href="#blog" className={classes.header__link}>
                 Личный блог
               </a>
-              <a
-                href="#contacts"
-                className={classes.header__link}
-                onClick={() => {
-                  setOpen(false);
-                }}
-              >
+              <a href="#contacts" className={classes.header__link}>
                 Контакты
               </a>
             </nav>
@@ -145,6 +127,7 @@ const Header = () => {
                 src={openedMenuIcon}
                 onClick={() => {
                   setOpen((prev) => !prev);
+                  enablePageScroll();
                 }}
               />
               <div className={classes.header__navigation_menu}>
@@ -155,16 +138,44 @@ const Header = () => {
                   <img className={classes.header__image} src={accountImage} />
                 </div>
                 <nav className={classes.header__navigation_list}>
-                  <a href="#about" className={classes.header__link}>
+                  <a
+                    href="#about"
+                    onClick={() => {
+                      setOpen(false);
+                      enablePageScroll();
+                    }}
+                    className={classes.header__link}
+                  >
                     О компании
                   </a>
-                  <a href="#projects" className={classes.header__link}>
+                  <a
+                    href="#projects"
+                    onClick={() => {
+                      setOpen(false);
+                      enablePageScroll();
+                    }}
+                    className={classes.header__link}
+                  >
                     Наши проекты
                   </a>
-                  <a href="#blog" className={classes.header__link}>
+                  <a
+                    href="#blog"
+                    onClick={() => {
+                      setOpen(false);
+                      enablePageScroll();
+                    }}
+                    className={classes.header__link}
+                  >
                     Личный блог
                   </a>
-                  <a href="#contacts" className={classes.header__link}>
+                  <a
+                    href="#contacts"
+                    onClick={() => {
+                      setOpen(false);
+                      enablePageScroll();
+                    }}
+                    className={classes.header__link}
+                  >
                     Контакты
                   </a>
                 </nav>
@@ -175,6 +186,7 @@ const Header = () => {
               src={closedMenuIcon}
               onClick={() => {
                 setOpen((prev) => !prev);
+                disablePageScroll();
               }}
             />
           )}

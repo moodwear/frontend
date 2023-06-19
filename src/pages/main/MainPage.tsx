@@ -6,8 +6,8 @@ import colors from "../../theme/colors";
 import fonts from "../../theme/fonts";
 import account1 from "./images/accaunt-logo1.svg";
 import articleImage from "./images/main.png";
-import tg from "./images/Frame 95.png";
-import wapp from "./images/Frame 96.png";
+import tg from "./images/Frame 95.svg";
+import wapp from "./images/Frame 96.svg";
 import theme from "../../theme/theme";
 
 const useStyles = makeStyles(() => ({
@@ -182,6 +182,10 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     padding: "10px 16px",
     borderRadius: "12px",
+    "&:hover": {
+        opacity: "0.7",
+        transition: "all 0.7s",
+      },
   },
   projects: {
     marginTop: "80px",
@@ -260,6 +264,10 @@ const useStyles = makeStyles(() => ({
     [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
+    "&:hover": {
+        opacity: "0.7",
+        transition: "all 0.7s",
+      },
   },
   blog: {
     marginTop: "80px",
@@ -308,7 +316,7 @@ const useStyles = makeStyles(() => ({
   article__header: {
     display: "flex",
     gap: "12px",
-    alignItems: "center",
+    alignItems: "flex-start",
     marginBottom: "16px",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
@@ -436,6 +444,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     gap: "8px",
     marginBottom: "8px",
+    paddingTop: '2px'
   },
 }));
 
@@ -530,9 +539,9 @@ const MainPage = () => {
           <h2 className={classes.about__question_title}>
             У вас есть интересный проект?
           </h2>
-          <button className={classes.about__question_button}>
+          <a href='#contacts' className={classes.about__question_button}>
             Связаться с нами
-          </button>
+          </a>
         </div>
       </section>
       <section className={classes.projects} id="projects">
