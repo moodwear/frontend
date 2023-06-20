@@ -71,7 +71,7 @@ const useStyles = makeStyles(() => ({
     gap: "24px",
     boxShadow: "15px 25px 25px #0f0f0f",
     backgroundColor: colors.white,
-    transition: 'all 0.5s',
+    transition: "all 0.5s",
   },
 }));
 
@@ -132,7 +132,14 @@ const Header = () => {
               />
               <div className={classes.header__navigation_menu}>
                 <div className={classes.header__auth}>
-                  <Link to="/login" className={classes.header__link}>
+                  <Link
+                    onClick={() => {
+                      setOpen((prev) => !prev);
+                      enablePageScroll();
+                    }}
+                    to="/login"
+                    className={classes.header__link}
+                  >
                     Войти в аккаунт
                   </Link>
                   <img className={classes.header__image} src={accountImage} />
