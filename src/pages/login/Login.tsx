@@ -9,7 +9,6 @@ import {
   Input,
   InputAdornment,
   InputLabel,
-  OutlinedInput,
   TextField,
 } from "@mui/material";
 import React from "react";
