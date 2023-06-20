@@ -103,7 +103,7 @@ const Header = () => {
           </div>
           <div className={classes.header__auth}>
             <Link
-              to="#"
+              to="/login"
               className={classes.header__link}
               onClick={() => {
                 setOpen(false);
@@ -132,7 +132,7 @@ const Header = () => {
               />
               <div className={classes.header__navigation_menu}>
                 <div className={classes.header__auth}>
-                  <Link to="#" className={classes.header__link}>
+                  <Link to="/login" className={classes.header__link}>
                     Войти в аккаунт
                   </Link>
                   <img className={classes.header__image} src={accountImage} />
